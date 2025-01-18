@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: arial, helvetica, sans-serif;
+        }
+        .topnav{
+            overflow: hidden;
+            background-color: BLACK
+        }
+        .topnav a{
+            float: left;
+            color: white;
+            text-align:center;
+            padding:14px 16px;
+            text-decoration: none;
+            font-size: 19px;
+        }
+        .topnav a:hover{
+            background-color:grey;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">HOME</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">GALLERY</a>
+        <a href="#">CONTACT</a>
+    </div>
+    <secton>
+        <img class="myslides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRpjCHKEPqcq_QGOzY7GpaDsWnNKLz0PsZbA&s "style="height :500px">
+        <img class="myslides" src="https://image.pngaaa.com/120/510120-middle.png "style="height :500px"> 
+    </secton>
+    <script>  
+        var myIndex=0;
+        carousel();
+        function carousel() {
+            var i;
+            var x =document.getElementsByClassName("myslides");
+            for ( i=0; i < x.length; i++){
+                x[i].style.display="none";
+
+            }
+            myIndex++;
+            if (myIndex > x.length){myIndex=1}
+            x[myIndex-1].style.display="block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</body>
+
+</html>
